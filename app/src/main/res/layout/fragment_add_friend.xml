@@ -1,0 +1,77 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:id="@+id/textViewAddFriendName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="90dp"
+        android:text="@string/add_friend_name"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <EditText
+        android:id="@+id/editTextAddFriendName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textViewAddFriendName"
+        android:layout_below="@+id/textViewAddFriendName"
+        android:ems="10"
+        android:inputType="textPersonName" >
+
+    </EditText>
+
+    <TextView
+        android:id="@+id/textViewAddFriendMail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/editTextAddFriendName"
+        android:layout_below="@+id/editTextAddFriendName"
+        android:layout_marginTop="50dp"
+        android:text="@string/add_friend_mail"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <EditText
+        android:id="@+id/editTextAddFriendMail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textViewAddFriendMail"
+        android:layout_below="@+id/textViewAddFriendMail"
+        android:ems="10"
+        android:inputType="textEmailAddress" />
+
+    <TextView
+        android:id="@+id/textViewEnterHCP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/editTextAddFriendMail"
+        android:layout_below="@+id/editTextAddFriendMail"
+        android:layout_marginTop="50dp"
+        android:text="@string/add_friend_HCP"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <EditText
+        android:id="@+id/editTextAddHCP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textViewEnterHCP"
+        android:layout_alignRight="@+id/textViewEnterHCP"
+        android:layout_below="@+id/textViewEnterHCP"
+        android:ems="10"
+        android:inputType="number"
+        android:maxLength="2" />
+
+    <SeekBar
+        android:id="@+id/seekBarHCP"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/editTextAddHCP"
+        android:layout_alignRight="@+id/editTextAddFriendMail"
+        android:layout_below="@+id/editTextAddHCP"
+        android:max="54" />
+
+</RelativeLayout>

@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="656dp" >
+
+        <TextView
+            android:id="@+id/textViewChooseCourse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="75dp"
+            android:text="@string/chose_course"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/textViewHoles"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textViewChooseCourse"
+            android:layout_below="@+id/spinner1"
+            android:layout_marginTop="75dp"
+            android:text="@string/chose_holes"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/textViewChoosePlayers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textViewHoles"
+            android:layout_below="@+id/enterDateButton"
+            android:layout_marginTop="100dp"
+            android:text="@string/chose_players"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <Button
+            android:id="@+id/enterDateButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textViewChoosePlayers"
+            android:layout_below="@+id/radioGroup1"
+            android:layout_marginTop="75dp"
+            android:onClick="showDatePickerDialog"
+            android:text="@string/enter_date" />
+
+        <GridLayout
+            android:id="@+id/gridLayout1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textViewChoosePlayers"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="100dp"
+            android:layout_marginTop="22dp"
+            android:columnCount="4"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:useDefaultMargins="true" >
+
+            <ImageButton
+                android:id="@+id/playerOne_button"
+                android:layout_width="65dp"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:contentDescription="@string/add_user"
+                android:onClick="addPlayer"
+                android:src="@drawable/ic_action_user_add"
+                android:text="@string/player_one_button" />
+
+            <ImageButton
+                android:id="@+id/playerTwo_button"
+                android:layout_width="65dp"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:contentDescription="@string/add_user"
+                android:onClick="addPlayer"
+                android:src="@drawable/ic_action_user_add"
+                android:text="@string/player_two_button" />
+
+            <ImageButton
+                android:id="@+id/playerThree_button"
+                android:layout_width="65dp"
+                android:layout_height="wrap_content"
+                android:layout_column="2"
+                android:contentDescription="@string/add_user"
+                android:onClick="addPlayer"
+                android:src="@drawable/ic_action_user_add"
+                android:text="@string/player_three_button" />
+
+            <ImageButton
+                android:id="@+id/playerFour_button"
+                android:layout_width="65dp"
+                android:layout_height="wrap_content"
+                android:layout_column="3"
+                android:contentDescription="@string/add_user"
+                android:onClick="addPlayer"
+                android:src="@drawable/ic_action_user_add"
+                android:text="@string/player_four_button" />
+
+            <TextView
+                android:id="@+id/textViewPlayerOne"
+                android:layout_column="0"
+                android:layout_gravity="center_horizontal|top"
+                android:layout_row="1"
+                android:text="@string/player_one"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <TextView
+                android:id="@+id/textViewPlayerTwo"
+                android:layout_column="1"
+                android:layout_gravity="center_horizontal|top"
+                android:layout_row="1"
+                android:text="@string/player_two"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <TextView
+                android:id="@+id/textViewPlayerThree"
+                android:layout_column="2"
+                android:layout_gravity="center_horizontal|top"
+                android:layout_row="1"
+                android:text="@string/player_three"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <TextView
+                android:id="@+id/textViewPlayerFour"
+                android:layout_column="3"
+                android:layout_gravity="center_horizontal|top"
+                android:layout_row="1"
+                android:text="@string/player_four"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+        </GridLayout>
+
+        <TextView
+            android:id="@+id/textViewTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/buttonEnterTime"
+            android:layout_alignRight="@+id/buttonEnterTime"
+            android:gravity="center_horizontal"
+            android:layout_below="@+id/buttonEnterTime"
+            android:layout_marginTop="18dp"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/textViewDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/textViewTime"
+            android:gravity="center_horizontal"
+            android:layout_alignBottom="@+id/textViewTime"
+            android:layout_alignLeft="@+id/enterDateButton"
+            android:layout_alignRight="@+id/enterDateButton"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <Button
+            android:id="@+id/buttonEnterTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/enterDateButton"
+            android:layout_alignBottom="@+id/enterDateButton"
+			android:layout_alignParentRight="true"
+            android:layout_marginRight="16dp"
+            android:onClick="showTimePickerDialog"
+            android:text="@string/enter_time" />
+
+        <Spinner
+            android:id="@+id/spinner1"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textViewChooseCourse"
+            android:layout_below="@+id/textViewChooseCourse" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textViewHoles"
+            android:layout_below="@+id/textViewHoles"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/radio0"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                android:onClick="setHoles"
+                android:text="@string/number_nine" />
+
+            <RadioButton
+                android:id="@+id/radio1"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:onClick="setHoles"
+                android:text="@string/number_eighteen" />
+        </RadioGroup>
+
+    </RelativeLayout>
+
+</ScrollView>
